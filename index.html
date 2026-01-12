@@ -1,0 +1,211 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Portfolio | terminal Welcome to my portfolio! — Type help for a list of supported commands."
+    />
+    <meta
+      name="keywords"
+      content="nobin, nobinrajeev, portfolio, HTML, CSS, nobin_rajeev, terminal terminal-portfolio"
+    />
+    <meta name="author" content="Nobin Rajeev" />
+
+    <link rel="shortcut icon" href="assets/favicon.png" type="image/x-icon" />
+
+    <!-- Preconnect and Preload -->
+    <link rel="preconnect" href="https://kit.fontawesome.com" crossorigin />
+    <link rel="preload" href="assets/cat.webp" as="image" type="image/webp" />
+    <link
+      rel="preload"
+      href="assets/beautifullanimestreetscenerycherryblossom.webp"
+      as="image"
+      type="image/webp"
+    />
+    <link
+      rel="preload"
+      href="assets/fonts/fantasquesansmonoregular.woff"
+      as="font"
+      type="font/woff"
+      crossorigin
+    />
+
+    <!-- Stylesheet -->
+    <link href="styles.css" rel="stylesheet" />
+
+    <!-- FontAwesome -->
+    <script
+      src="https://kit.fontawesome.com/39565093f3.js"
+      crossorigin="anonymous"
+      defer
+    ></script>
+
+    <style>
+      section h1 {
+        font-size: 2rem;
+      }
+    </style>
+
+    <!-- JS: Close Window -->
+    <script>
+      function close_window() {
+        if (confirm("Close Window?")) {
+          window.location.href = "about:blank";
+        }
+      }
+    </script>
+
+    <title>Nobin Rajeev</title>
+  </head>
+  <body>
+    <div class="terminal-window" role="main">
+      <header role="banner" aria-label="Site Header">
+        <a
+          href="https://github.com/nobin7034/"
+          target="_blank"
+          aria-label="GitHub Profile"
+        >
+          <i
+            class="fa-brands fa-github header-icon github-icon"
+            aria-hidden="true"
+          ></i>
+        </a>
+
+        <div class="centered" aria-hidden="true">
+          <span>nobin-rajeev</span>
+        </div>
+
+        <a
+          href="#"
+          onclick="close_window(); return false;"
+          aria-label="Close Window"
+        >
+          <i
+            class="fa-solid fa-circle-xmark header-icon close-icon"
+            aria-hidden="true"
+          ></i>
+        </a>
+      </header>
+
+      <hr aria-hidden="true" />
+
+      <div id="contentscroll">
+        <div class="content-container">
+          <div class="ascii-Hero" role="presentation" aria-hidden="true">
+            <pre class="ascii">
+█▄░█ █▀█ █▄▄ █ █▄░█   █▀█ ▄▀█ ░░█ █▀▀ █▀▀ █░█
+█░▀█ █▄█ █▄█ █ █░▀█   █▀▄ █▀█ █▄█ ██▄ ██▄ ▀▄▀
+            </pre>
+          </div>
+
+          <section class="profile-info" aria-labelledby="profile-heading">
+            <h1 id="profile-heading" class="sr-only">Profile Information</h1>
+
+            <div class="info-item">
+              <div class="name">
+                <i class="fa-solid fa-address-card" aria-hidden="true"></i>
+                <span>Nobin Rajeev</span>
+              </div>
+            </div>
+
+            <div class="info-item">
+              <i class="fa-solid fa-file-invoice" aria-hidden="true"></i>
+              <span>Resume</span>
+              <a
+                href="RESUME.pdf"
+                class="link-text"
+                target="_blank"
+                aria-label="Download my resume"
+                >→ &nbsp;Download my resume...</a
+              >
+            </div>
+
+            <div class="info-item">
+              <i class="fa-brands fa-github" aria-hidden="true"></i>
+              <span>GitHub</span>
+              <a
+                href="https://github.com/nobin7034"
+                class="link-text"
+                target="_blank"
+                aria-label="GitHub nobin7034"
+                >→ &nbsp;github/nobin7034</a
+              >
+            </div>
+
+            <div class="info-item">
+              <i class="fa-brands fa-twitter" aria-hidden="true"></i>
+              <span>Twitter</span>
+              <a
+                href="https://x.com/NobinRajeev?t=AylLMR2tHTex9Kuixqp1Tg&s=09"
+                class="link-text"
+                target="_blank"
+                aria-label="Twitter NobinRajeev"
+                >→ &nbsp;twitter/NobinRajeev</a
+              >
+            </div>
+
+            <div class="info-item">
+              <i class="fa-brands fa-linkedin-in" aria-hidden="true"></i>
+              <span>LinkedIn</span>
+              <a
+                href="https://www.linkedin.com/in/nobin-rajeev-0a0132336/"
+                class="link-text"
+                target="_blank"
+                aria-label="LinkedIn NobinRajeev"
+                >→ &nbsp;linkedin/NobinRajeev</a
+              >
+            </div>
+
+          </section>
+        </div>
+
+        <section id="terminal" aria-label="Terminal Emulator">
+          <a id="before"></a>
+
+          <div
+            id="command"
+            onclick="document.getElementById('texter').focus();"
+          >
+            <label for="texter" class="sr-only">Command Input</label>
+            <input
+              type="text"
+              id="texter"
+              class="texter"
+              aria-label="Command line input"
+              onkeyup="typeIt(this, event)"
+              onkeydown="typeIt(this, event); moveIt(this.value.length, event)"
+              onkeypress="typeIt(this, event);"
+            />
+            <div id="liner">
+              <span id="typer" aria-live="polite"></span
+              ><b class="cursor" id="cursor" aria-hidden="true">█</b>
+              <div class="list" aria-hidden="true"></div>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <footer class="bottom-bar" role="contentinfo">
+        <div class="license-info"></div>
+      </footer>
+
+      <picture>
+        <source srcset="assets/cat.webp" type="image/webp" />
+        <img
+          src="assets/cat.gif"
+          id="cursor-cat-gif"
+          alt="cursor-follower"
+          loading="lazy"
+        />
+      </picture>
+
+      <script src="js/theme.js" defer></script>
+      <script src="js/caret.js" defer></script>
+      <script src="js/cursor.js" defer></script>
+      <script src="js/commands.js" defer></script>
+      <script src="js/main.js" defer></script>
+    </div>
+  </body>
+</html>
