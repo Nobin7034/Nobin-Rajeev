@@ -110,7 +110,7 @@ Built With:
   </pre>`,
 
   // Hospital Management
-  `<a href="#" target="_blank"><span class='underline'>Hospital Management System</span></a>`,
+  `<a href="https://codespulse.xyz/" target="_blank"><span class='underline'>Hospital Management System</span></a>`,
   `<pre class="indent-8 whitespace-pre-wrap break-words overflow-x-auto">
 Full-stack academic project for managing patients, staff, appointments.
 Built With:

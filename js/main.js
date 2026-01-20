@@ -31,6 +31,7 @@ const commandMap = {
   linkedin: "linkedin",
   github: "github",
   snake: "snake",
+  resume: "resume",
 };
 
 setTimeout(function () {
@@ -196,6 +197,10 @@ function commander(cmd) {
       break;
     case "snake":
       runSnakeGame();
+      break;
+    case "resume":
+      addLine("Opening resume...", "color2", 0);
+      newTab("RESUME.pdf");
       break;
     default:
       const closest = findClosestCommand(cmd);
